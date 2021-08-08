@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta 
+    name = 'description' 
+    content="Simple CSS code generator which helps in selecting better color for website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <script src="./picker.js"></script>
+    <link rel="icon" href="./CB.png" type="image/icon type">
+
+    <title>Color Picker - CSS Buddy</title>
+</head>
+<body>
+    <h1 class="title">CSS Buddy</h1>
+    <h2 class="title">CSS - Colour Picker</h2>
+    <div>
+        <input autocomplete = "off" class="in" type="color" id="in" value="#ffffff" oninput="change()">
+    </div>
+    <div>
+        <canvas id="cn"></canvas>
+    </div>
+    <div id="foot">
+        <p>Colour Code in HEX: <p id="hex">#ffffff</p></p>
+        <br>
+    
+        <p>Colour Code in RGB: <p id="rgb">rgb(255, 255, 255)</p></p>
+    </div>
+    <style>
+        *{
+            background : #e0e0e0;
+            font-family: 'Inconsolata', monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title{
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        input[type=color]{
+            -webkit-appearance: none;
+            width: 40%;
+            height: 25px;
+            border: solid black 3px;
+            display: flex;
+            margin: auto;
+            margin-top: 40px;
+            box-sizing: border-box;
+        }
+        input[type=color]:hover{
+            cursor: pointer;
+        }
+        #cn{
+            background: white;
+            width: 40%;
+            border: solid black 3px;
+            display: flex;
+            margin: auto;
+            margin-top: 40px;
+            box-sizing: border-box;
+        }
+        #foot{
+            text-align: center;
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        @media (max-width: 1024px){
+            input[type=color]{
+                width: 80%;
+            }
+            #cn{
+                width: 80%;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,111 @@
+*{
+    font-family: 'Inconsolata', monospace;
+}
+body{
+    min-height: 100vh; 
+    background: radial-gradient( #8da4de, #708bd6, #5072cd, #6565fa); 
+    
+}
+.title{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.glass{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba( 255, 255, 255, 0.2 );
+    border-radius: 15px;
+}
+.slddr{
+    display: flex;
+    margin: auto;
+    width: 50%;
+    padding-top: 10px;
+}
+.slider{
+    height: 52px;
+    width: 50%;
+    margin: auto;
+    background-color: #200167;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+#sld{
+    display: flex;
+    appearance: none;
+    width: 100%;
+    border-radius: 2px;
+    align-self: center;
+    overflow: hidden;
+    outline: none;
+}
+.show{
+    display: inline-block;
+    margin: auto;
+    color: white;
+    margin-top: 2px;
+    font-size: 18px;
+}
+input[type=range]::-webkit-slider-thumb, ::-moz-range-thumb, ::-ms-thumb, ::-moz-thumb {
+    appearance: none;
+    box-sizing: content-box;
+    background-color: #5072cd;
+    border: 3px black;
+}
+.re{
+    display: flex;
+    border: 15px #200167;
+}
+.res{
+    display: inline-block;
+    width: 50%;
+    height: 100px;
+    background-color: #e0e0e0;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 18px;
+    color: brown;
+    border: 30px solid #000;
+    border-radius: 15px;
+}
+p{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#sld::-webkit-slider-thumb {
+    width: 25px;
+    height: 50px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+ #sld::-moz-range-thumb {
+    width: 25px;
+    height: 50px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  @media (max-width:850px) and (min-width: 530px){
+      .res{
+          border: solid black 10px;
+          width: 80%;
+      }
+      .slider{
+          width: 80%;
+      }
+  }
+  @media (max-width: 530px){
+      .res{
+          border: solid black 3px;
+          width: 90%;
+          height: 10%;
+      }
+      .slider{
+          width: 90%;
+      }
+  }

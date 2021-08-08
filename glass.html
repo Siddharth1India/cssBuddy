@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = 'description' content="Simple CSS code generator which helps in generating Glassmorphism for website">
+    <link rel="stylesheet" href="./glass.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./CB.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism - CSS Buddy</title>
+</head>
+<body>
+    <h1 class="title">CSS Buddy</h1>
+    <h2 class="title">CSS - Glassmorphism</h2>
+    <div class="ran"> 
+        <div class="glass" id="glass">
+
+        </div>
+        <div class="slider">
+            <span class="slddr">
+            <input type="range" id="sld" min="0" max="1" step="0.01" value="0" autocomplete="off">
+        </span>
+        <span class="show" id="show">Transparency = 0</span>
+        </div>
+        <div class="re">
+            <span class="res"><p>
+            width: 250px; <br>
+            height: 250px;<br>
+            <span class="final"> background-color: rgba(255, 255, 255, 0); </span><br>
+                 border: 1px solid rgba( 255, 255, 255, 0.2 );<br>
+                border-radius: 15px;<br>
+        </p></span>
+        </div>
+    </div>
+    <script src="./glass.js"></script>
+</body>
+</html>

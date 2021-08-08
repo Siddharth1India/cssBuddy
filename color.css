@@ -1,0 +1,83 @@
+:root{
+    --colorNow: #000;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #e0e0e0;
+    font-family: 'Inconsolata', monospace;
+}
+
+.title{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+.left{
+    width: 26%;
+    overflow: hidden;
+    box-shadow:  25px 25px 50px #bebebe,
+                        -25px -25px 50px #ffffff;
+    border-radius: 10%;
+    padding: 1%;
+    text-align: center;
+    transition-duration: 0.4s;
+}
+.right{
+    width: 26%;
+    overflow: hidden;
+    box-shadow:  25px 25px 50px #bebebe,
+                        -25px -25px 50px #ffffff;
+    border-radius: 10%;
+    padding: 1%;
+    text-align: center;
+    transition-duration: 0.4s;
+
+}
+.center{
+    width: 26%;
+    overflow: hidden;
+    box-shadow:  25px 25px 50px #bebebe,
+                        -25px -25px 50px #ffffff;
+    border-radius: 10%;
+    padding: 1%;
+    text-align: center;
+    transition-duration: 0.4s;
+
+}
+img{
+    margin-top: 1%;
+    height: 70%;
+    width: 80%;
+    border-radius: 5%;
+}
+h3{
+    font-size: 30px;
+}
+.left:hover, .right:hover, .center:hover{
+    transform: scale(1.1);
+}
+@media (max-width: 1150px) and (min-width:768px){
+    .left,.right, .center{
+        height: 100%;
+    } 
+}
+@media (max-width: 766px){
+    .container{
+        display: block;
+        width: 100%;
+    }
+    .left, .right, .center{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+    }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta 
+    name = 'description' 
+    content="Simple CSS code generator which helps in generating Neumorphism for website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="icon" href="./CB.png" type="image/icon type">
+    <title>Neumorphism - CSS Buddy</title>
+</head>
+<body>
+    <div class='whatever'>
+        <h1 class="title">CSS Buddy</h1>
+        <h2 class="title">CSS - Neumorphism</h2>
+    </div>
+    <div class='change' id="change">
+        <div class="int">
+            <div id="col">
+                <p id='co'>Pick your color</p><br>
+                <input type="color" id="in" class="in" value="#e0e0e0" autocomplete="off" oninput="changeColor()">
+            </div>
+            <div>
+                <p id='di'>Distance</p><br>
+                <input type="range" min="10" max="50" value="25" id='didi' oninput="distance()">
+            </div>
+            <div>
+                <p id='ins'>Intensity</p>
+                <input type="range" min="0" max="255" value="65" id = 'insins' oninput="intensity()">
+            </div>
+        </div>
+    </div>
+    <div class="preview" id="pre">
+        <div class='pre' id="preIn">
+            
+        </div>
+    </div>
+    <div class='code' id="code">
+        <br>
+        <p>border-radius: 48px;</p>
+        <p id='t1'>background: #e0e0e0;</p>
+        <pre><p id='t2'>box-shadow: rgb(190,190,190) 25px 25px 50px,
+            rgb(255,255,255) -25px -25px 50px;</p></pre>
+    </div>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Inconsolata', monospace;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #e0e0e0;
+
+        }
+        .title{
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .change{
+            width: 50%;
+            height: 65%;
+            float: left;
+        }
+        .preview{
+            width: 50%;
+            height: 65%;
+            float: right;
+        }
+        .code{
+            overflow: hidden;
+            margin-top: 0%;
+            background: black;
+            width: 60%;
+            height: 150px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background: #ffffff;
+            border: 30px solid black;
+            border-radius: 15px;
+            padding-left: 20px;
+            font-size: 20px;
+            padding-top: 20px;
+        }
+        #preIn{
+            height: 60%;
+            width: 50%;
+            display: flex;
+            margin: auto;
+            margin-top: 5%;
+            border-radius: 48px;
+            box-shadow:  25px 25px 50px #bebebe, -25px -25px 50px #ffffff;
+        }
+        .int{
+            height: 70%;
+            width: 60%;
+            transform: translateX(33%) translateY(5%);
+            border-radius: 48px;
+            box-shadow:  25px 25px 50px #bebebe,
+                        -25px -25px 50px #ffffff;
+
+            overflow: hidden;
+        }
+        
+        input[type=color]{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+            margin-top: 0%;
+            margin-bottom: 0;
+            height: 25px;
+            border: 2px solid black;
+        }
+        #co, #di, #ins{
+            padding: 0;
+            text-align: center;
+            margin-top: 5%;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        input[type=range]{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        #ins{
+            margin-bottom: 20px;
+        }
+        @media (max-width: 1024px) and (min-width: 726px) {
+            #preIn{
+                height: 60%;
+            }
+            .int{
+                height: 80%;
+            }
+            #change{
+                margin-top: 10px;
+                height: 30%;
+            }
+            #pre{
+                margin-top: 10px;
+                height: 30%;
+            }
+        }
+        @media (max-width: 726px){
+            .code{
+                padding-left: 5px;
+                width: 90%;
+                border: solid black 5px;
+                font-size: 14px;
+            }
+            #pre{
+                width: 100%;
+                height: 30%;
+                margin-top: 0%;
+                margin-bottom: 10%;
+            }
+            .int{
+                width: 60%;
+                height: 80%;
+            }
+            #preIn{
+                width: 80%;
+                height: 100%;
+                margin: auto;
+            }
+            #change{
+                margin-top: 5%;
+                height: 45%;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    <script>
+        function changeColor(){
+            let ci = document.getElementById("in").value;
+            document.getElementById('pre').style.background = ci;
+            document.getElementById('change').style.background = ci;
+            document.body.style.background = ci;
+            document.getElementById('preIn').style.background = ci;
+            document.getElementById('col').style.background = ci;
+            let x = ci[1] + ci[2];
+            let y = ci[3] + ci[4];
+            let z = ci[5] + ci[6];
+
+            let r = parseInt(x,16);
+            let g = parseInt(y,16);
+            let b = parseInt(z,16);
+            if(r <= 128 && g <= 128 && b <= 128){
+                document.body.style.color = 'white';
+                document.getElementById('code').style.border = '30px solid white';
+                document.getElementById('code').style.background = 'black';
+            }
+            if(r >= 128 && g >= 128 && b >= 128){
+                document.body.style.color = 'black';
+                document.getElementById('code').style.border = '30px solid black';
+                document.getElementById('code').style.background = 'white';
+            }
+            var k = 'background: '+ci+';';
+            document.getElementById('t1').innerHTML = k;
+        }
+        var d;
+        function distance(){
+            intensity();
+            d = document.getElementById('didi').value;
+            document.getElementById('preIn').style.boxShadow = d+'px'+' '+d+'px'+' '+(2*d)+'px'+' '+c+','+(-d)+'px'+' '+(-d)+'px'+' '+(2*d)+'px'+' '+f;
+            // console.log(document.getElementById('preIn').style["box-shadow"]);
+            document.getElementById('t2').innerHTML = 'box-shadow: '+sn+';';
+        }
+
+        var c,f,ci,cp, sf, st, sk, sd, sn;
+        function intensity(){
+            ci = document.getElementById("in").value;
+            let x = ci[1] + ci[2];
+            let y = ci[3] + ci[4];
+            let z = ci[5] + ci[6];
+
+            let r = parseInt(x,16);
+            let g = parseInt(y,16);
+            let b = parseInt(z,16);
+            var i = document.getElementById('insins').value;
+            var d = document.getElementById('didi').value;
+            i = parseInt(i);
+            r = parseInt(r);
+            g = parseInt(g);
+            b = parseInt(b);
+            var l,m,n;
+            if(r<=255 || g<=255 || b<=255){
+                if(r>=0){
+                    l = r-i;
+                }
+                if(g>=0){
+                    m = g-i;
+                }
+                if(b>=0){
+                    n = b-i;
+                }
+            }
+            c = 'rgb('+(l)+','+(m)+','+(n)+')';
+            var s,p,q;
+            
+            if(r<=255 || g<=255 || b<=255){
+                if(r<=255){
+                    s = r+i;
+                }
+                if(g<=255){
+                    p = g+i;
+                }
+                if(b<=255){
+                    q = b+i;
+                }
+            }
+            s = parseInt(s);
+            p = parseInt(p);
+            q = parseInt(q);
+            f = 'rgb('+s+','+p+','+q+')';
+            var h = 'rgb('+(s-224)+','+(p-224)+','+(q-224)+')';
+            document.getElementById('preIn').style.boxShadow = d+'px'+' '+d+'px'+' '+(2*d)+'px'+' '+c+','+(-d)+'px'+' '+(-d)+'px'+' '+(2*d)+'px'+' '+f;
+            var elem = document.getElementById("preIn");
+            cp = window.getComputedStyle(elem, null).getPropertyValue("box-shadow");      
+            sf = cp.indexOf('x,');
+            console.log(sf);
+            sk = '<br>';
+            sd = '            ';
+            st = [cp.slice(0,sf+2),sk,cp.slice(sf+2)].join(""); 
+            sn = [st.slice(0,sf+6),sd,st.slice(sf+6)].join("");
+            document.getElementById("t2").innerHTML = 'box-shadow: '+sn+';';
+            console.log(cp);
+        }
+    </script>
+</body>
+</html>
