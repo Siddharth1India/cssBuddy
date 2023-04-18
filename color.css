@@ -10,6 +10,7 @@
 
 .title{
     text-align: center;
+    margin-top: 10px;
 }
 a{
     text-decoration: none;
@@ -26,9 +27,10 @@ a{
     box-shadow:  25px 25px 50px #bebebe,
                         -25px -25px 50px #ffffff;
     border-radius: 10%;
-    padding: 1%;
+    padding: 3%;
     text-align: center;
     transition-duration: 0.4s;
+    margin-bottom: 20px;
 }
 .right{
     width: 26%;
@@ -36,7 +38,7 @@ a{
     box-shadow:  25px 25px 50px #bebebe,
                         -25px -25px 50px #ffffff;
     border-radius: 10%;
-    padding: 1%;
+    padding: 3%;
     text-align: center;
     transition-duration: 0.4s;
 
@@ -47,9 +49,10 @@ a{
     box-shadow:  25px 25px 50px #bebebe,
                         -25px -25px 50px #ffffff;
     border-radius: 10%;
-    padding: 1%;
+    padding: 3%;
     text-align: center;
     transition-duration: 0.4s;
+    margin-bottom: 20px;
 
 }
 img{
